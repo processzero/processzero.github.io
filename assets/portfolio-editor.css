@@ -1,0 +1,31 @@
+[hidden]{display:none!important}
+.editor-sites{display:flex;gap:16px;font-size:12px;margin-bottom:24px}
+#unlock-panel{max-width:380px;margin:60px auto}
+#unlock-panel h1{margin-bottom:12px}
+.unlock-controls{display:flex;gap:8px;margin-top:8px}
+input,button{font:inherit}
+#pin{width:110px;padding:8px;border:1px solid #aaa;letter-spacing:5px}
+button{padding:7px 11px;cursor:pointer;border:1px solid #aaa;border-radius:2px;background:#fff;color:#222}
+button:disabled{opacity:.6;cursor:wait}
+button:focus-visible,input:focus-visible,[contenteditable]:focus-visible{outline:2px solid #1549a1;outline-offset:3px}
+#unlock-error{color:#a32323;font-size:13px;margin-top:10px}
+.editor-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:10px 0;margin-bottom:14px;background:#fff;border-bottom:1px solid #ddd;font-size:12px}
+#save-button{background:#1549a1;border-color:#1549a1;color:white}
+#save-status{flex:1;min-width:130px;line-height:1.4;color:#555}
+.editor-sites-compact{font-size:11px;margin:10px 0 16px}
+#site-title[contenteditable]{cursor:text}
+.ql-container{font:inherit;height:auto;border:0!important}
+.ql-editor{padding:0;line-height:inherit;overflow:visible;white-space:normal;min-height:150px}
+.ql-editor p{margin:0 0 9px}
+.ql-editor h2{font-size:18px;line-height:1.25;margin:18px 0 6px}
+.ql-editor h3{font-size:16px;margin:14px 0 6px}
+.ql-editor ol{padding-left:22px;margin:0}
+.ql-editor li{margin:0 0 6px;padding-left:0!important}
+.ql-editor li:last-child{margin-bottom:0}
+.ql-editor li>.ql-ui:before{margin-left:-1.3em;margin-right:.3em}
+.ql-editor a{color:#1549a1;text-decoration:underline;text-underline-offset:3px}
+.ql-bubble .ql-tooltip{z-index:10}
+.ql-bubble .ql-tooltip input{color:white}
+.editor-note{font-size:11px;color:#666;margin-top:20px}
+@media(max-width:480px){#unlock-panel{margin:35px auto}.ql-editor p{margin-bottom:8px}.ql-editor h2{font-size:16px;margin:15px 0 5px}.ql-editor li{margin-bottom:5px}.ql-editor ol{padding-left:18px}.editor-bar{gap:7px}.editor-bar>a{margin-left:auto}}
+@media(max-width:480px) and (max-height:700px){.ql-editor p{margin-bottom:7px}.ql-editor h2{font-size:15px;margin:12px 0 4px}.ql-editor li{margin-bottom:4px}}

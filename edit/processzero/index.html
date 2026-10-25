@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src https://processzero-content-api.aryammanbhatia.chatgpt.site; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Edit Process Zero</title>
+<link rel="stylesheet" href="/assets/site.css?v=2">
+<link rel="stylesheet" href="/assets/quill.snow.css">
+<link rel="stylesheet" href="/assets/quill.bubble.css">
+<link rel="stylesheet" href="/assets/editor.css">
+<script src="/assets/purify.min.js" defer></script>
+<script src="/assets/quill.js" defer></script>
+<script src="/assets/editor.js?v=2" defer></script>
+</head><body>
+<main id="unlock-panel">
+  <p><a href="/edit/">Portfolio editor</a> · Process Zero editor</p><h1>Process Zero</h1><p class="byline">Content editor</p>
+  <form id="unlock-form"><label for="pin">Enter your PIN</label>
+    <div class="unlock-controls"><input id="pin" type="password" inputmode="numeric" pattern="[0-9]{4}" minlength="4" maxlength="4" autocomplete="off" required aria-describedby="unlock-error"><button id="unlock-button" type="submit">Unlock</button></div>
+    <p id="unlock-error" role="alert"></p>
+  </form>
+  <p><a href="/">Back to the site</a></p>
+</main>
+<div id="editor-panel" hidden>
+  <div class="editor-bar"><button id="save-button">Save changes</button><span id="save-status" role="status" aria-live="polite"></span><button id="logout-button">Lock</button><a href="/" target="_blank" rel="noopener">View site</a><a href="/edit/">Portfolio editor</a></div>
+  <main>
+    <header>
+      <h1 id="site-title" contenteditable="plaintext-only" role="textbox" aria-label="Website title"></h1>
+      <p class="byline"><span id="author-name" contenteditable="plaintext-only" role="textbox" aria-label="Your name"></span> <button id="author-link-toggle" class="text-button">Edit link</button></p>
+      <p id="author-link-field" hidden><label for="author-url">Your website </label><input id="author-url" type="url"></p>
+      <div id="intro-editor" class="intro"></div>
+    </header>
+    <details name="sections"><summary><span id="section-title-0" contenteditable="plaintext-only" role="textbox" aria-label="Section 1 heading"></span></summary><div id="section-editor-0"></div></details>
+<details name="sections"><summary><span id="section-title-1" contenteditable="plaintext-only" role="textbox" aria-label="Section 2 heading"></span></summary><div id="section-editor-1"></div></details>
+<details name="sections"><summary><span id="section-title-2" contenteditable="plaintext-only" role="textbox" aria-label="Section 3 heading"></span></summary><div id="section-editor-2"></div></details>
+    <p class="editor-note">Click text to edit. Select text to format it or add a link. Save changes to publish.</p>
+  </main>
+</div>
+<noscript>Enable JavaScript to use the editor.</noscript>
+</body></html>
