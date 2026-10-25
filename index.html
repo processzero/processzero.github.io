@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Process Zero — integrating AI into semiconductor fabrication workflows, building AI native fabs, and accelerating to the frontier and beyond.">
+  <title>Process Zero</title>
+  <style>
+    body { max-width: 680px; margin: clamp(12px, 3svh, 28px) auto; padding: 0 24px; font-family: Arial, sans-serif; font-size: clamp(13px, 1.95svh, 16px); line-height: 1.4; color: #222; background: #fff; }
+    h1 { font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
+    h2 { font-size: 18px; line-height: 1.25; margin: 18px 0 6px; }
+    p { margin: 0 0 9px; }
+    ol { padding-left: 22px; margin: 0; }
+    li { margin: 0 0 6px; }
+    li:last-child { margin-bottom: 0; }
+    main > section:last-child p { margin-bottom: 0; }
+    a { color: #1549a1; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    @media (max-width: 480px) {
+      body { margin: 16px auto; padding: 0 18px; font-size: 14px; line-height: 1.35; }
+      h1 { font-size: 24px; margin-bottom: 8px; }
+      h2 { font-size: 16px; margin: 15px 0 5px; }
+      p { margin-bottom: 8px; }
+      ol { padding-left: 18px; }
+      li { margin-bottom: 5px; }
+    }
+    @media (max-width: 480px) and (max-height: 700px) {
+      body { margin: 12px auto; font-size: 13px; line-height: 1.3; }
+      h1 { font-size: 23px; margin-bottom: 7px; }
+      h2 { font-size: 15px; margin: 12px 0 4px; }
+      p { margin-bottom: 7px; }
+      li { margin-bottom: 4px; }
+    }
+    @media (max-width: 360px) and (max-height: 600px) {
+      body { margin: 10px auto; padding: 0 14px; font-size: 12.5px; line-height: 1.25; }
+      h1 { font-size: 22px; }
+      h2 { margin-top: 9px; }
+      p { margin-bottom: 6px; }
+      li { margin-bottom: 3px; }
+    }
+  
+    ol ol { margin-top: 6px; }
+    main { padding-bottom: 24px; }
+    li { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Process Zero</h1><p>I want to learn how to integrate AI into semiconductor fabrication workflows, then build AI native fabs, and eventually accelerate rapidly to the frontier and beyond.</p></header>
+    <section aria-label="Roadmap"><ol>
+<li>Start with two difficult grade process engineering/integration research problems.
+<ol>
+<li>Problem 1 - solve it traditionally myself - use LLMs as research tools</li>
+<li>Problem 2 - AI as lead engineer - feed it everything the human tool operator sees - and let it own the entire process flow</li>
+<li>Emerge with insights on AI process engineering/optimisation
+<ol>
+<li>Are the existing LLMs already master process engineers(unlikely)
+<ol>
+<li>As an aside it’d be interesting to investigate how GPT5 vs GPT6 is at process engineering. Does improvement track other fields, or is it bottlenecked by something other than the intelligence of the model.</li>
+</ol></li>
+<li>What kind of approaches would be the most valuable to try? Is it some fine-tuning, RLHF, PINNs, etc.</li>
+</ol></li>
+</ol></li>
+<li>Pick a new process engineering problem and try the most promising approach based on insights gained in 1
+<ol>
+<li>Repeat until arriving at some promising results</li>
+<li>Come out of this exercise with - “here’s how we can use AI to solve novel process engineering problems”
+<ol>
+<li>An alternate insight can be - “We were not able to see significant improvements in process engineering by including AI in the loop.”
+<ol>
+<li>In this case we investigate why - maybe the bottleneck is something like verifiability or digitisability - we use these insights and figure out how to solve this problem before moving forward to step 3.</li>
+</ol></li>
+</ol></li>
+<li>For now let’s assume we succeed and move on.</li>
+</ol></li>
+<li>Now build a small, AI-native RnD fab
+<ol>
+<li>Don’t own just a single process- own the entire fab.</li>
+<li>Hire experts on every process - litho, deposition, etch, etc - maybe 5-8 total people.
+<ol>
+<li>Ideally have one of these be someone super senior, who has overseen some RnD and/or process integration at TSMC/Intel/IBM/Samsung/gF/Rapidus</li>
+</ol></li>
+<li>Integrate AI into all the workflows</li>
+<li>Scale up and fine tune the approach in (2) over the entire fab.</li>
+<li>This can also be a pilot line to your objective in (4)</li>
+<li>“Here’s how we can use AI to consistently solve a wide range of difficult and useful process engineering problems, much faster than with humans alone”</li>
+</ol></li>
+<li>Now build a niche product at scale, and show that AI can accelerate the research-volume production pipeline too.
+<ol>
+<li>Fabricating chips at scale has different challenges as compared to building individual research grade devices - you need to focus on manufacturability - yield, wafer scale uniformity, throughput, etc.</li>
+<li>The next challenge is to show that the the systems you build are capable of this</li>
+<li>It is a misconception that fabs imply only the frontier silicon fabs. There are a lot of small fabs that produce at volume niche and differentiated chips.</li>
+<li>The success condition here - “My organisation is capable of using AI to develop a novel/frontier process in a niche, and actually manufactured a chip at scale on this new process”</li>
+</ol></li>
+<li>The big jump - go for the frontier pilot line
+<ol>
+<li>I figured out the right way to integrate AI into existing semiconductor fabrication workflows, used it to repeatably solve novel process engineering problems faster and better than humans alone, and took a niche process to production in record timeline - this is why you should take this leap on faith on my systems to be able to get to the frontier, given the right resources.</li>
+<li>This is a Rapidus style bet - Japan bet huge money on Rapidus to get to 2nm from scratch(with IBM’s help) - they started in 2023 and had a functioning pilot line in 2026.</li>
+<li>Buy all the frontier equipment, build a new fab with the pilot line, and get to the frontier.</li>
+<li>“I can fabricate chips with frontier level performance on my pilot line.”</li>
+</ol></li>
+<li>At the frontier
+<ol>
+<li>Figuring out how to scale the pilot line to high volume production.</li>
+<li>“I can fabricate chips at the frontier, with high volume and scale, economically”</li>
+</ol></li>
+<li>Beyond the frontier
+<ol>
+<li>“I managed to reimagine the way chip fabrication works and leapfrog to the frontier from scratch. My organisation is the only one that has fully-integrated and is native to this new paradigm - I have the right to win from here on out”</li>
+</ol></li>
+</ol></section>
+    <section aria-labelledby="qna"><h2 id="qna">QnA</h2><ol>
+<li>Why do I want to focus on the fab as opposed to anything else?
+<ol>
+<li>Fab is the centre of the ecosystem - if you want to bring the whole ecosystem- you must have fabs. (Imagine building a lithography company - it is very valuable in and of itself, but it doesn’t become the centre of the entire semiconductor ecosystem) - as the famous quote goes - “Real men have fabs”</li>
+</ol></li>
+<li>Can AI really enable a rapid acceleration to the frontier?
+<ol>
+<li>Empirically - most people who have said “AI can do X, but not Y” have been proven wrong.</li>
+<li>At the end of the day, even TSMC is a bunch of above-average intelligence employees, who are trained on organizational knowledge and then work a trainable desk-job on a computer.
+<ol>
+<li>Yes the organizational knowledge is difficult to obtain, tacit, obscure and a huge moat - but ultimately that too was created by testing intelligent hypotheses.</li>
+<li>If existing employees can be trained to do these jobs right out of college, there’s no reason to believe agents cannot be trained to do the same.</li>
+</ol></li>
+<li>If you buy that, in principle there is a future, where most TSMC employees jobs can be done by AI
+<ol>
+<li>There’s no reason to believe the AIs need to stop there and can’t get even better like they have got in programming.</li>
+<li>There is opportunity in becoming the person who builds this newer, better imagination of a semiconductor fab
+<ol>
+<li>It is hard for incumbents to integrate such radical technology change - a newcomer has a fighting chance.</li>
+<li>If successful this can be the world’s biggest company- because once you can reach the frontier, that’s a very arbitrary place for your acceleration advantage by being AI native will go away - it is likely to continue.</li>
+<li>Solving this problem can mean owning the frontier.</li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>Why such a heavy focus on process?
+<ol>
+<li>Process is the ultimate bottleneck
+<ol>
+<li>The next frontier is not a grand, unthinkable idea - but figuring out how to manufacture it according to spec, with high throughput and yield - this is fundamentally a process engineering problem.
+<ol>
+<li>Stuff like CFET architecture, backside power delivery - to come in future nodes, are all process problems</li>
+</ol></li>
+<li>Building equipment is a means to an end to using them to do processes.</li>
+</ol></li>
+</ol></li>
+</ol></section>
+  </main>
+</body>
+</html>
