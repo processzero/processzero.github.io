@@ -42,12 +42,24 @@
     ol ol { margin-top: 6px; }
     main { padding-bottom: 24px; }
     li { overflow-wrap: anywhere; }
+    details { margin-top: 18px; }
+    summary { cursor: pointer; font-size: 18px; font-weight: bold; line-height: 1.25; }
+    summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    details[open] > summary { margin-bottom: 9px; }
+    @media (max-width: 480px) { summary { font-size: 16px; } }
   </style>
 </head>
 <body>
   <main>
-    <header><h1>Process Zero</h1><p><a href="https://aryammanb.github.io/">Aryamman Bhatia</a></p><p>I want to learn how to integrate AI into semiconductor fabrication workflows, then build AI native fabs, and eventually accelerate rapidly to the frontier and beyond.</p></header>
-    <section aria-label="Roadmap"><ol>
+    <header><h1>Process Zero</h1><p><a href="https://aryammanb.github.io/">Aryamman Bhatia</a></p></header>
+    <details>
+      <summary>The Problem</summary>
+      <p>Yet to be written.</p>
+    </details>
+    <details>
+      <summary>My plan to solve the problem</summary>
+      <p>I want to learn how to integrate AI into semiconductor fabrication workflows, then build AI native fabs, and eventually accelerate rapidly to the frontier and beyond.</p>
+      <ol>
 <li>Start with two difficult grade process engineering/integration research problems.
 <ol>
 <li>Problem 1 - solve it traditionally myself - use LLMs as research tools</li>
@@ -108,8 +120,11 @@
 <ol>
 <li>“I managed to reimagine the way chip fabrication works and leapfrog to the frontier from scratch. My organisation is the only one that has fully-integrated and is native to this new paradigm - I have the right to win from here on out”</li>
 </ol></li>
-</ol></section>
-    <section aria-labelledby="qna"><h2 id="qna">QnA</h2><ol>
+</ol>
+    </details>
+    <details>
+      <summary>QnA</summary>
+      <ol>
 <li>Why do I want to focus on the fab as opposed to anything else?
 <ol>
 <li>Fab is the centre of the ecosystem - if you want to bring the whole ecosystem- you must have fabs. (Imagine building a lithography company - it is very valuable in and of itself, but it doesn’t become the centre of the entire semiconductor ecosystem) - as the famous quote goes - “Real men have fabs”</li>
@@ -144,7 +159,8 @@
 <li>Building equipment is a means to an end to using them to do processes.</li>
 </ol></li>
 </ol></li>
-</ol></section>
+</ol>
+    </details>
   </main>
 </body>
 </html>
