@@ -2,41 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src https://processzero-content-api.aryammanbhatia.chatgpt.site; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Process Zero — integrating AI into semiconductor fabrication workflows, building AI native fabs, and accelerating to the frontier and beyond.">
   <title>Process Zero</title>
-  <style>
-    html { overflow-y: scroll; }
-    body { max-width: 640px; margin: 48px auto; padding: 0 24px; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #292929; background: #fff; }
-    h1 { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 7px; }
-    p { margin: 0 0 12px; }
-    a { color: #1549a1; text-underline-offset: 3px; }
-    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-    .byline { font-size: 13px; color: #777; margin-bottom: 25px; }
-    .byline a { color: inherit; }
-    .intro { margin-bottom: 25px; }
-    ol { padding-left: 22px; margin: 0; }
-    li { margin-bottom: 8px; }
-    li:last-child { margin-bottom: 0; }
-    @media (max-width: 480px) { body { margin: 28px auto; padding: 0 20px; font-size: 14px; } h1 { font-size: 23px; } ol { padding-left: 18px; } }
-
-    ol ol { margin-top: 6px; }
-    main { padding-bottom: 24px; }
-    li { overflow-wrap: anywhere; }
-    details { margin-top: 12px; }
-    summary { cursor: pointer; font-size: inherit; font-weight: 400; line-height: 1.5; }
-    summary::marker { color: #888; font-size: 0.75em; }
-    summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-    details[open] > summary { margin-bottom: 14px; }
-    details[open] { margin-bottom: 24px; }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
   <main>
     <header>
       <h1>Process Zero</h1>
       <p class="byline"><a href="https://aryammanb.github.io/">Aryamman Bhatia</a></p>
-      <p class="intro">I want to learn how to integrate AI into semiconductor fabrication workflows, then build AI native fabs, and eventually accelerate rapidly to the frontier and beyond.</p>
+      <div class="intro">I want to learn how to integrate AI into semiconductor fabrication workflows, then build AI native fabs, and eventually accelerate rapidly to the frontier and beyond.</div>
     </header>
     <details name="sections">
       <summary>The Problem</summary>
@@ -147,12 +124,7 @@
 </ol>
     </details>
   </main>
-  <script>
-    document.querySelectorAll('details[name="sections"]').forEach(section => {
-      section.addEventListener('toggle', () => {
-        if (section.open) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      });
-    });
-  </script>
+  <script src="/assets/purify.min.js" defer></script>
+  <script src="/assets/content.js" defer></script>
 </body>
 </html>

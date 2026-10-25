@@ -1,0 +1,26 @@
+
+    html { overflow-y: scroll; }
+    body { max-width: 640px; margin: 48px auto; padding: 0 24px; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #292929; background: #fff; }
+    h1 { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 7px; }
+    p { margin: 0 0 12px; }
+    a { color: #1549a1; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    .byline { font-size: 13px; color: #777; margin-bottom: 25px; }
+    .byline a { color: inherit; }
+    .intro { margin-bottom: 25px; }
+    ol { padding-left: 22px; margin: 0; }
+    li { margin-bottom: 8px; }
+    li:last-child { margin-bottom: 0; }
+    @media (max-width: 480px) { body { margin: 28px auto; padding: 0 20px; font-size: 14px; } h1 { font-size: 23px; } ol { padding-left: 18px; } }
+
+    ol ol { margin-top: 6px; }
+    main { padding-bottom: 24px; }
+    li { overflow-wrap: anywhere; }
+    details { margin-top: 12px; }
+    summary { cursor: pointer; font-size: inherit; font-weight: 400; line-height: 1.5; }
+    summary::marker { color: #888; font-size: 0.75em; }
+    summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    details[open] > summary { margin-bottom: 14px; }
+    details[open] { margin-bottom: 24px; }
+  
+.intro > :last-child { margin-bottom: 0; }
