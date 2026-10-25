@@ -146,5 +146,12 @@
 </ol>
     </details>
   </main>
+  <script>
+    document.querySelectorAll('details[name="sections"]').forEach(section => {
+      section.addEventListener('toggle', () => {
+        if (section.open) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      });
+    });
+  </script>
 </body>
 </html>
