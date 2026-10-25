@@ -1,14 +1,7 @@
 # Process Zero
 
 The public site is https://processzero.github.io/. Edit content at
-https://processzero.github.io/edit/processzero/ using its existing private PIN.
-
-The editor at https://processzero.github.io/edit/ now opens Aryamman’s portfolio
-editor. The Portfolio / Process Zero links switch between the two. Portfolio
-saves update https://aryammanb.github.io/ through separate backend endpoints,
-tables, PIN secrets, sessions, limits, and revision history. The portfolio editor
-uses Quill with the portfolio’s original typography and layout. It currently
-edits the portfolio homepage; the three project pages remain code-managed.
+https://processzero.github.io/edit/ using the private PIN.
 
 The editor uses Quill, with the public site's layout. **Save changes** publishes
 content immediately to the shared content service; visitors get the current
