@@ -6,7 +6,7 @@
   const byId=id=>document.getElementById(id);
   const status=message=>{byId('save-status').textContent=message;};
   const markDirty=()=>{dirty=true;status('Unsaved changes');};
-  const htmlClean=html=>DOMPurify.sanitize(html,{ALLOWED_TAGS:['p','br','strong','b','em','i','u','s','ol','ul','li','a','blockquote','code','h2','h3','sub','sup'],ALLOWED_ATTR:['href','title'],ALLOW_DATA_ATTR:false});
+  const htmlClean=html=>DOMPurify.sanitize(html,{ALLOWED_TAGS:['p','br','strong','b','em','i','u','s','ol','ul','li','a','blockquote','code','h2','h3','sub','sup'],ALLOWED_ATTR:['href','title'],ALLOW_DATA_ATTR:false}).replace(/&nbsp;|&#160;|\u00a0/g,' ');
   const formats=['bold','italic','underline','strike','link','list','indent','blockquote','code','header'];
   const toolbar=[['bold','italic','link'],[{list:'ordered'},{list:'bullet'}],[{indent:'-1'},{indent:'+1'}],['clean']];
   const inlineOptions={theme:'bubble',formats,modules:{toolbar:[['bold','italic','link']]}};
@@ -45,8 +45,8 @@
   }
   const documentValue=()=>({
     title:byId('site-title').textContent.trim(),author:byId('author-name').textContent.trim(),authorUrl,
-    intro:introEditor.getSemanticHTML(),
-    sections:editors.map((editor,i)=>({title:byId('section-title-'+i).textContent.trim(),html:editor.getSemanticHTML()})),
+    intro:introEditor.getSemanticHTML().replace(/&nbsp;|&#160;|\u00a0/g,' '),
+    sections:editors.map((editor,i)=>({title:byId('section-title-'+i).textContent.trim(),html:editor.getSemanticHTML().replace(/&nbsp;|&#160;|\u00a0/g,' ')})),
   });
   function lock(message='') {
     token=null;expiresAt=0;

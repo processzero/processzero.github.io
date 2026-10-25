@@ -4,7 +4,7 @@
   const clean=html=>DOMPurify.sanitize(html,{
     ALLOWED_TAGS:['p','br','strong','b','em','i','u','s','ol','ul','li','a','blockquote','code','h2','h3','sub','sup'],
     ALLOWED_ATTR:['href','title'],ALLOW_DATA_ATTR:false,
-  });
+  }).replace(/&nbsp;|&#160;|\u00a0/g,' ');
   const bindSections=()=>document.querySelectorAll('details[name="sections"]').forEach(section=>{
     section.addEventListener('toggle',()=>{if(section.open)window.scrollTo({top:0,left:0,behavior:'instant'});});
   });
