@@ -9,7 +9,7 @@ content on page load. There is no GitHub deployment wait for text changes.
 
 ## Source and data
 
-- `index.html`: original readable page and fallback when the content service is unavailable.
+- `index.html`: page shell; shows a loading message until current content is ready, or a retry on failure. It never displays an old content snapshot.
 - `assets/site.css`: shared public/editor typography and layout.
 - `assets/content.js`: loads current public content and handles the accordion.
 - `edit/index.html`, `assets/editor.js`, `assets/editor.css`: editor UI.

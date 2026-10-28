@@ -9,7 +9,7 @@
     section.addEventListener('toggle',()=>{if(section.open)window.scrollTo({top:0,left:0,behavior:'instant'});});
   });
   function render(doc) {
-    if(!doc||!Array.isArray(doc.sections)||doc.sections.length!==3)return;
+    if(!doc||typeof doc.title!=='string'||typeof doc.author!=='string'||typeof doc.intro!=='string'||!Array.isArray(doc.sections)||doc.sections.length!==3||doc.sections.some(section=>typeof section.title!=='string'||typeof section.html!=='string'))throw new Error('Invalid content');
     document.querySelector('h1').textContent=doc.title;
     document.title=doc.title;
     const author=document.querySelector('.byline a');
@@ -27,8 +27,29 @@
     });
   }
   bindSections();
-  fetch(API+'/content',{cache:'no-store',signal:AbortSignal.timeout(10000)})
-    .then(response=>{if(!response.ok)throw new Error('Unavailable');return response.json();})
-    .then(data=>render(data.document))
-    .catch(()=>{}); // The original published HTML remains readable if the API is unavailable.
+  const main=document.querySelector('main');
+  const loading=document.getElementById('content-loading');
+  const message=document.getElementById('content-status');
+  const retry=document.getElementById('content-retry');
+  async function load() {
+    main.hidden=true;
+    main.setAttribute('aria-busy','true');
+    loading.hidden=false;
+    message.textContent='Loading…';
+    retry.hidden=true;
+    try {
+      const response=await fetch(API+'/content',{cache:'no-store',signal:AbortSignal.timeout(15000)});
+      if(!response.ok)throw new Error('Unavailable');
+      const data=await response.json();
+      render(data.document);
+      main.setAttribute('aria-busy','false');
+      main.hidden=false;
+      loading.hidden=true;
+    } catch {
+      message.textContent='Couldn’t load the latest content.';
+      retry.hidden=false;
+    }
+  }
+  retry.addEventListener('click',load);
+  load();
 })();
