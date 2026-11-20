@@ -24,3 +24,4 @@
     details[open] { margin-bottom: 24px; }
   
 .intro > :last-child { margin-bottom: 0; }
+.experiment-title { font-size: 18px; line-height: 1.35; margin: 18px 0 7px; letter-spacing: 0; }
