@@ -1,26 +1,73 @@
+:root {
+  --text: #292929;
+  --muted: #6b6b6b;
+  --link: #1549a1;
+  --body-size: 15px;
+  --small-size: 13px;
+  --title-size: 20px;
+}
 
-    html { overflow-y: scroll; }
-    body { max-width: 640px; margin: 48px auto; padding: 0 24px; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #292929; background: #fff; }
-    h1 { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 7px; }
-    p { margin: 0 0 12px; }
-    a { color: #1549a1; text-underline-offset: 3px; }
-    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-    .byline { font-size: 13px; color: #777; margin-bottom: 25px; }
-    .intro { margin-bottom: 25px; }
-    ol { padding-left: 22px; margin: 0; }
-    li { margin-bottom: 8px; }
-    li:last-child { margin-bottom: 0; }
-    @media (max-width: 480px) { body { margin: 28px auto; padding: 0 20px; font-size: 14px; } h1 { font-size: 23px; } ol { padding-left: 18px; } }
-
-    ol ol { margin-top: 6px; }
-    main { padding-bottom: 24px; }
-    li { overflow-wrap: anywhere; }
-    details { margin-top: 12px; }
-    summary { cursor: pointer; font-size: inherit; font-weight: 700; line-height: 1.5; }
-    summary::marker { color: #888; font-size: 0.75em; }
-    summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-    details[open] > summary { margin-bottom: 14px; }
-    details[open] { margin-bottom: 24px; }
-  
+* { box-sizing: border-box; }
+html { overflow-y: scroll; }
+[hidden] { display: none !important; }
+body {
+  max-width: 688px;
+  margin: 48px auto;
+  padding: 0 24px;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+h1, h2, h3, summary, strong, b { font-weight: 700; }
+h1 {
+  margin: 0 0 8px;
+  font-size: var(--title-size);
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+h2, h3 {
+  margin: 24px 0 12px;
+  font-size: var(--body-size);
+  line-height: 1.5;
+}
+p { margin: 0 0 16px; }
+a, a:visited { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+button, input { font: inherit; }
+nav, .byline {
+  font-size: var(--small-size);
+  line-height: 1.5;
+}
+nav { margin: 0 0 24px; }
+nav p { margin: 0; }
+main + nav { margin: 28px 0 0; }
+.byline { margin: 0; color: var(--muted); }
+.intro { margin: 24px 0 28px; }
 .intro > :last-child { margin-bottom: 0; }
-.experiment-title { font-size: 18px; line-height: 1.35; margin: 18px 0 7px; letter-spacing: 0; }
+article > header { margin-bottom: 24px; }
+main > h1 { margin-bottom: 24px; }
+.blog-entry h2 { margin: 0 0 8px; }
+ol, ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin: 0 0 8px; }
+li:last-child { margin-bottom: 0; }
+li > ol, li > ul { margin: 8px 0 0; }
+li > p:last-child { margin-bottom: 0; }
+details { margin: 0 0 16px; }
+summary { cursor: pointer; font-size: var(--body-size); line-height: 1.5; }
+summary::marker { color: var(--muted); font-size: 0.75em; }
+details[open] > summary { margin-bottom: 16px; }
+details[open] { margin-bottom: 28px; }
+.section-content > :last-child, .post-body > :last-child { margin-bottom: 0; }
+blockquote { margin: 16px 0; padding-left: 16px; border-left: 2px solid #ddd; }
+@media (max-width: 480px) {
+  body { margin: 28px auto; padding: 0 20px; }
+  ol, ul { padding-left: 20px; }
+}
