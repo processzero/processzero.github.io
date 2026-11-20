@@ -67,6 +67,13 @@ details[open] > summary { margin-bottom: 16px; }
 details[open] { margin-bottom: 28px; }
 .section-content > :last-child, .post-body > :last-child { margin-bottom: 0; }
 blockquote { margin: 16px 0; padding-left: 16px; border-left: 2px solid #ddd; }
+.post-part + .post-part { margin-top: 24px; }
+.post-part > :last-child { margin-bottom: 0; }
+.post-context { color: #25635a; }
+.post-prompts { color: #315b8b; }
+.post-notes { color: #795329; }
+.post-results { color: #70477c; }
+.post-results h2 { font-size: inherit; font-weight: 400; line-height: inherit; margin: 0 0 16px; }
 @media (max-width: 480px) {
   body { margin: 28px auto; padding: 0 20px; }
   ol, ul { padding-left: 20px; }
